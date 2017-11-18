@@ -1,0 +1,70 @@
+<html>
+
+
+	<div class="background-image-index">
+		<h1 class="title">To Do Application</h1>
+		<table class="table table-stripped form">  
+
+		<tbody>
+
+			<div class="container">
+				<thead>
+		 			<title>ToDoApp</title>
+		 				<th class="form">Title</th>
+		 				<b><th class="form">Description</th></b>
+				</thead>
+
+
+	
+		
+	   <% @tasklists.each do |tasklist|	%>
+	  
+		 <tr>
+			<td class="index-text">	
+				<%= tasklist.title	%>
+			</td>
+			<td class="index-text">
+				<%= tasklist.description %>
+			</td>
+
+
+			<td class="index-text">
+				<%= link_to 'View', tasklist_path(id: tasklist.id) %>
+			</td>
+
+			<td class="index-text">
+				<%= link_to 'Destroy', tasklist_path(id: tasklist.id),
+					method: :delete,
+					data: { confirm: 'Are You Sure?'} %>
+			</td>
+		 </tr>
+	 
+	   <% end	%>	
+			
+</table>
+
+
+
+<div class="form index-text">
+<%= link_to 'Create New Post', new_tasklist_path %>
+</div>
+
+
+
+
+	<div class="container-index">
+		<h1 class="quote">Quote Generator</h1>
+		<div id="quoteDisplay">
+		<p>Long live Wei-Liang & Serine</p>
+		</div>
+		</div>
+		<div class="wrapper">
+		<button onclick="genQuote()">New Quote</button></div>
+		<script src="javascript.js"></script>
+		</div> 
+	</div>
+
+</tbody>
+</html>
+
+

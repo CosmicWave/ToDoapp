@@ -1,0 +1,41 @@
+<div class="background-image-new">
+
+
+
+
+
+
+
+
+
+<%= form_for @tasklist, url: tasklists_path, method: :post do |f| %>
+
+<div class="tasklist-new-position">
+<div class="form">
+	<%= f.label  :title %></br>
+	<%= f.text_field :title %>
+</div>
+
+
+<div class="form">
+	<%= f.label  :description %></br>
+  <%= f.text_field :description %>
+</div>
+
+
+<div class="form">
+  <%= f.submit "Create" %>
+</div>
+<% end %>
+
+</div>
+</div>
+
+
+
+        
+
+
+
+<%= yield %>
+

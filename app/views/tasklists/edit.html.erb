@@ -1,0 +1,35 @@
+
+
+<div class="background-image-tasklist-edit">
+
+<%= form_for @tasklist, url: tasklist_path(id: @tasklist.id), method: :put do |f| %>
+
+
+
+<div class="tasklist-edit-position">    	
+
+<div class="form">
+	<%= f.label  :title %></br>
+	<%= f.text_field :title %>
+</div>
+
+
+<div class="form">
+	<%= f.label  :description %></br>
+  <%= f.text_field :description %>
+</div>
+
+
+
+<div class="form"></br>
+  <%= f.submit "Create" %>
+</div>
+
+<% end %>
+
+</div>
+
+</div>
+
+<%= yield %>
+
